@@ -24,7 +24,11 @@ class TestimonialPostType extends PostType {
 			'supports'     => [ 'title', 'editor', 'thumbnail', 'excerpt', 'page-attributes' ],
             'label'        => __( 'Testimonials', 'testimonials' ),
             'labels'       => [
-                'singular' => __( 'Testimonial', 'initialized' )
+				'singular_name'         => __( 'Testimonial', 'testimonials' ),
+				'featured_image'        => __( 'Profile picture', 'testimonials' ),
+				'set_featured_image'    => __( 'Set profile picture', 'testimonials' ),
+				'remove_featured_image' => __( 'Remove profile picture', 'testimonials' ),
+				'use_featured_image'    => __( 'Use as profile picture', 'testimonials' ),
             ],
 		] );
 		register_post_type( static::get_post_type(), $args );

@@ -16,6 +16,8 @@ abstract class PostType extends Singleton {
 
 	protected static $is_initialized = false;
 
+	private static $language = false;
+
 	protected $old_post_type = '';
 
 	protected $args = [];
@@ -25,10 +27,25 @@ abstract class PostType extends Singleton {
 	 */
 	protected function init() {
 		static::$is_initialized = true;
+		if ( ! self::$language ) {
+			add_action( 'init', [ $this, 'i18n'], 2 );
+			self::$language = true;
+		}
 		add_action( 'init', [ $this, 'register_post_type' ] );
 		add_action( 'add_meta_boxes', [ $this, 'register_meta_boxes' ], 10, 2 );
 		add_action( 'save_post', [ $this, 'save_post' ], 10, 2 );
 		add_filter( 'enter_title_here', [ $this, 'enter_title_here' ], 10, 2 );
+	}
+
+	/**
+	 * Register po files.
+	 */
+	public function i18n() {
+		$mo = dirname( dirname( dirname( __DIR__ ) ) ) . '/languages/testimonials-%s.mo';
+		$mo = sprintf( $mo, get_user_locale() );
+		if ( file_exists( $mo ) ) {
+			load_textdomain( 'testimonials', $mo );
+		}
 	}
 
 	/**
