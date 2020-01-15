@@ -1,63 +1,182 @@
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=1; plural=0;\n"
 "Project-Id-Version: Testimonials\n"
-"POT-Creation-Date: 2020-01-15 03:38+0900\n"
-"PO-Revision-Date: 2020-01-15 03:41+0900\n"
+"POT-Creation-Date: 2020-01-15 13:14+0900\n"
+"PO-Revision-Date: 2020-01-15 13:21+0900\n"
+"Last-Translator: Takahashi Fumiki <takahashi.fumiki@hametuha.co.jp>\n"
 "Language-Team: Takahashi Fumiki <takahashi.fumiki@hametuha.co.jp>\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 2.2.4\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: testimonials.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Last-Translator: Takahashi Fumiki <takahashi.fumiki@hametuha.co.jp>\n"
-"Language: ja\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:23
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:35
+msgid "Portfolio"
+msgstr "ポートフォリオ"
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:25
+msgid "Project"
+msgstr "プロジェクト"
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:26
+msgid "Add New Project"
+msgstr "新規プロジェクトを追加"
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:27
+msgid "Edit Project"
+msgstr "プロジェクトを編集"
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:28
+msgid "New Project "
+msgstr "新しいプロジェクト"
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:29
+msgid "View Project"
+msgstr "プロジェクトを表示"
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:30
+msgid "View Projects"
+msgstr "プロジェクトを表示"
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:31
+msgid "Search Projects"
+msgstr "プロジェクトを検索"
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:32
+msgid "No project found"
+msgstr "プロジェクトが見つかりません"
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:33
+msgid "No project found in Trash"
+msgstr "ゴミ箱にプロジェクトはありませんでした"
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:34
+msgid "All projects"
+msgstr "すべてのプロジェクト"
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:36
+msgid "Project Attributes"
+msgstr "プロジェクト属性"
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:37
+msgid "Insert into project"
+msgstr "プロジェクトに挿入"
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:38
+msgid "Upload to this project"
+msgstr "このプロジェクトに追加"
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:39
+msgid "Filter projects list"
+msgstr "プロジェクトをフィルター"
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:40
+msgid "Project published."
+msgstr "プロジェクトは公開されました。"
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:41
+msgid "Project published privately."
+msgstr "プロジェクトは非公開になりました。"
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:42
+msgid "Project reverted to draft."
+msgstr "プロジェクトは下書きに戻りました。"
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:43
+msgid "Project scheduled."
+msgstr "プロジェクトが公開予約されました。"
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:44
+msgid "Project updated"
+msgstr "プロジェクトが更新されました"
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:51
+msgid "Category"
+msgstr "カテゴリー"
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:62
+msgid "Enter project title here."
+msgstr "プロジェクトのタイトルを入力。"
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:78
+msgid "Project Detail"
+msgstr "プロジェクト詳細"
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:83
+msgid "Related Link"
+msgstr "関連リンク"
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:87
+msgid "e.g. https://example.com/project"
+msgstr "例・https://example.com"
 
 #. Plugin Name of the plugin/theme
 #: src/Kunoichi/Testimonials/TestimonialPostType.php:25
 msgid "Testimonials"
 msgstr "推薦文"
 
-#: src/Kunoichi/Testimonials/TestimonialPostType.php:27
+#: src/Kunoichi/Testimonials/TestimonialPostType.php:28
 msgid "Testimonial"
 msgstr "推薦文"
 
-#: src/Kunoichi/Testimonials/TestimonialPostType.php:34
+#: src/Kunoichi/Testimonials/TestimonialPostType.php:29
+msgid "Profile picture"
+msgstr "プロフィール画像"
+
+#: src/Kunoichi/Testimonials/TestimonialPostType.php:30
+msgid "Set profile picture"
+msgstr "プロフィール画像を設定"
+
+#: src/Kunoichi/Testimonials/TestimonialPostType.php:31
+msgid "Remove profile picture"
+msgstr "プロフィール画像を削除"
+
+#: src/Kunoichi/Testimonials/TestimonialPostType.php:32
+msgid "Use as profile picture"
+msgstr "プロフィール画像として使用"
+
+#: src/Kunoichi/Testimonials/TestimonialPostType.php:39
 msgid "Enter the name of the nominator."
 msgstr "推薦者の名前を入力。"
 
-#: src/Kunoichi/Testimonials/TestimonialPostType.php:39
+#: src/Kunoichi/Testimonials/TestimonialPostType.php:44
 msgid "Source of testimonial"
 msgstr "推薦文の出典"
 
-#: src/Kunoichi/Testimonials/TestimonialPostType.php:44
+#: src/Kunoichi/Testimonials/TestimonialPostType.php:49
 msgid "Position"
 msgstr "肩書"
 
-#: src/Kunoichi/Testimonials/TestimonialPostType.php:47
+#: src/Kunoichi/Testimonials/TestimonialPostType.php:52
 msgid "e.g. CEO of Super Company"
 msgstr "例・すごい株式会社の代表取締役"
 
-#: src/Kunoichi/Testimonials/TestimonialPostType.php:50
+#: src/Kunoichi/Testimonials/TestimonialPostType.php:55
 msgid "Source"
 msgstr "出典"
 
-#: src/Kunoichi/Testimonials/TestimonialPostType.php:53
+#: src/Kunoichi/Testimonials/TestimonialPostType.php:58
 msgid "e.g. Great Magazine Vol.999"
 msgstr "例・グレートマガジン999号"
 
-#: src/Kunoichi/Testimonials/TestimonialPostType.php:56
+#: src/Kunoichi/Testimonials/TestimonialPostType.php:61
 msgid "URL"
 msgstr "URL"
 
-#: src/Kunoichi/Testimonials/TestimonialPostType.php:59
+#: src/Kunoichi/Testimonials/TestimonialPostType.php:64
 msgid "e.g. https://example.com"
 msgstr "例・https://example.com"
 

@@ -48,11 +48,11 @@ class PortfolioPostType extends PostType {
 
 		if ( apply_filters( 'testimonials_create_portfolio_categories', true ) ) {
 			$args = apply_filters( 'testimonials_portfolio_category_args', [
-				'label'                => __( 'Category', 'portfolio' ),
+				'label'                => __( 'Category', 'testimonials' ),
 				'hierarchical'         => false,
 				'show_in_rest'         => true,
 				'public'               => true,
-                'show_in_admin_column' => true,
+                'show_admin_column' => true,
 			] );
 			register_taxonomy( 'portfolio-category', [ static::get_post_type() ], $args );
 		}

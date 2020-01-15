@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Testimonials\n"
-"POT-Creation-Date: 2020-01-15 03:38+0900\n"
+"POT-Creation-Date: 2020-01-15 13:14+0900\n"
 "PO-Revision-Date: 2020-01-15 03:38+0900\n"
 "Last-Translator: Takahashi Fumiki <takahashi.fumiki@hametuha.co.jp>\n"
 "Language-Team: Takahashi Fumiki <takahashi.fumiki@hametuha.co.jp>\n"
@@ -16,50 +16,167 @@ msgstr ""
 "X-Poedit-WPHeader: testimonials.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:23
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:35
+msgid "Portfolio"
+msgstr ""
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:25
+msgid "Project"
+msgstr ""
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:26
+msgid "Add New Project"
+msgstr ""
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:27
+msgid "Edit Project"
+msgstr ""
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:28
+msgid "New Project "
+msgstr ""
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:29
+msgid "View Project"
+msgstr ""
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:30
+msgid "View Projects"
+msgstr ""
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:31
+msgid "Search Projects"
+msgstr ""
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:32
+msgid "No project found"
+msgstr ""
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:33
+msgid "No project found in Trash"
+msgstr ""
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:34
+msgid "All projects"
+msgstr ""
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:36
+msgid "Project Attributes"
+msgstr ""
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:37
+msgid "Insert into project"
+msgstr ""
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:38
+msgid "Upload to this project"
+msgstr ""
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:39
+msgid "Filter projects list"
+msgstr ""
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:40
+msgid "Project published."
+msgstr ""
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:41
+msgid "Project published privately."
+msgstr ""
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:42
+msgid "Project reverted to draft."
+msgstr ""
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:43
+msgid "Project scheduled."
+msgstr ""
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:44
+msgid "Project updated"
+msgstr ""
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:51
+msgid "Category"
+msgstr ""
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:62
+msgid "Enter project title here."
+msgstr ""
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:78
+msgid "Project Detail"
+msgstr ""
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:83
+msgid "Related Link"
+msgstr ""
+
+#: src/Kunoichi/Testimonials/PortfolioPostType.php:87
+msgid "e.g. https://example.com/project"
+msgstr ""
 
 #. Plugin Name of the plugin/theme
 #: src/Kunoichi/Testimonials/TestimonialPostType.php:25
 msgid "Testimonials"
 msgstr ""
 
-#: src/Kunoichi/Testimonials/TestimonialPostType.php:27
+#: src/Kunoichi/Testimonials/TestimonialPostType.php:28
 msgid "Testimonial"
 msgstr ""
 
-#: src/Kunoichi/Testimonials/TestimonialPostType.php:34
-msgid "Enter the name of the nominator."
+#: src/Kunoichi/Testimonials/TestimonialPostType.php:29
+msgid "Profile picture"
+msgstr ""
+
+#: src/Kunoichi/Testimonials/TestimonialPostType.php:30
+msgid "Set profile picture"
+msgstr ""
+
+#: src/Kunoichi/Testimonials/TestimonialPostType.php:31
+msgid "Remove profile picture"
+msgstr ""
+
+#: src/Kunoichi/Testimonials/TestimonialPostType.php:32
+msgid "Use as profile picture"
 msgstr ""
 
 #: src/Kunoichi/Testimonials/TestimonialPostType.php:39
-msgid "Source of testimonial"
+msgid "Enter the name of the nominator."
 msgstr ""
 
 #: src/Kunoichi/Testimonials/TestimonialPostType.php:44
+msgid "Source of testimonial"
+msgstr ""
+
+#: src/Kunoichi/Testimonials/TestimonialPostType.php:49
 msgid "Position"
 msgstr ""
 
-#: src/Kunoichi/Testimonials/TestimonialPostType.php:47
+#: src/Kunoichi/Testimonials/TestimonialPostType.php:52
 msgid "e.g. CEO of Super Company"
 msgstr ""
 
-#: src/Kunoichi/Testimonials/TestimonialPostType.php:50
+#: src/Kunoichi/Testimonials/TestimonialPostType.php:55
 msgid "Source"
 msgstr ""
 
-#: src/Kunoichi/Testimonials/TestimonialPostType.php:53
+#: src/Kunoichi/Testimonials/TestimonialPostType.php:58
 msgid "e.g. Great Magazine Vol.999"
 msgstr ""
 
-#: src/Kunoichi/Testimonials/TestimonialPostType.php:56
+#: src/Kunoichi/Testimonials/TestimonialPostType.php:61
 msgid "URL"
 msgstr ""
 
-#: src/Kunoichi/Testimonials/TestimonialPostType.php:59
+#: src/Kunoichi/Testimonials/TestimonialPostType.php:64
 msgid "e.g. https://example.com"
 msgstr ""
 
