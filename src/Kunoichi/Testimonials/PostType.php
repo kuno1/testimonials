@@ -70,7 +70,7 @@ abstract class PostType extends Singleton {
 	 * @param \WP_Post $post
 	 * @return string
 	 */
-	protected function enter_title( $string = '', $post ) {
+	protected function enter_title( $string = '', $post = null ) {
 		return $string;
 	}
 
@@ -184,6 +184,21 @@ abstract class PostType extends Singleton {
 	 * @return void
 	 */
 	abstract protected function add_meta_boxes( \WP_Post $post );
+
+	/**
+	 * Search and find old post type.
+	 *
+	 * @param string $post_type
+	 * @return bool
+	 */
+	protected function post_type_exists( $post_type ) {
+		global $wpdb;
+		$query = <<<SQL
+			SELECT COUNT( ID ) FROM { $wpdb->posts }
+			WHERE post_type = %s
+SQL;
+		return (bool) $wpdb->get_var( $wpdb->prepare( $quer, $post_type ) );
+	}
 
 	/**
 	 * Getter

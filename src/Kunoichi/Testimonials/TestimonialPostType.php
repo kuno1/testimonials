@@ -16,14 +16,15 @@ class TestimonialPostType extends PostType {
 
 	public function register_post_type() {
 		$args = wp_parse_args( $this->args, [
-			'post_type'    => static::get_post_type(),
-			'public'       => false,
-			'show_ui'      => true,
-			'menu_icon'    => 'dashicons-awards',
-			'show_in_rest' => true,
-			'supports'     => [ 'title', 'editor', 'thumbnail', 'excerpt', 'page-attributes' ],
-            'label'        => __( 'Testimonials', 'testimonials' ),
-            'labels'       => [
+			'post_type'         => static::get_post_type(),
+			'public'            => false,
+			'show_ui'           => true,
+			'menu_icon'         => 'dashicons-awards',
+			'show_in_rest'      => true,
+			'supports'          => [ 'title', 'editor', 'thumbnail', 'excerpt', 'page-attributes' ],
+            'label'             => __( 'Testimonials', 'testimonials' ),
+			'show_in_nave_menu' => false,
+            'labels'            => [
 				'singular_name'         => __( 'Testimonial', 'testimonials' ),
 				'featured_image'        => __( 'Profile picture', 'testimonials' ),
 				'set_featured_image'    => __( 'Set profile picture', 'testimonials' ),
@@ -34,7 +35,7 @@ class TestimonialPostType extends PostType {
 		register_post_type( static::get_post_type(), $args );
 	}
 
-	protected function enter_title( $string = '', $post ) {
+	protected function enter_title( $string = '', $post = null ) {
 		return __( 'Enter the name of the nominator.', 'testimonials' );
 	}
 
@@ -73,7 +74,7 @@ class TestimonialPostType extends PostType {
 	 * 1. If Jetpack is used, change post type.
 	 */
 	protected function initialize_args() {
-		if ( isset( $this->args['jetpack'] ) && $this->args['jetpack'] ) {
+		if ( isset( $this->args['jetpack'] ) && $this->args['jetpack'] && $this->post_type_exists( 'jetpack-testimonial' ) ) {
 			// Jetpack is used. so change post type.
 			$this->old_post_type = 'jetpack-testimonial';
 		}
