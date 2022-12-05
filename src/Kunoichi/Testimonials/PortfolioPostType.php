@@ -48,11 +48,11 @@ class PortfolioPostType extends PostType {
 
 		if ( apply_filters( 'testimonials_create_portfolio_categories', true ) ) {
 			$args = apply_filters( 'testimonials_portfolio_category_args', [
-				'label'                => __( 'Category', 'testimonials' ),
-				'hierarchical'         => false,
-				'show_in_rest'         => true,
-				'public'               => true,
-                'show_admin_column' => true,
+				'label'             => __( 'Category', 'testimonials' ),
+				'hierarchical'      => false,
+				'show_in_rest'      => true,
+				'public'            => true,
+				'show_admin_column' => true,
 			] );
 			register_taxonomy( 'portfolio-category', [ static::get_post_type() ], $args );
 		}
@@ -78,23 +78,23 @@ class PortfolioPostType extends PostType {
 		add_meta_box( 'portfolio-information', __( 'Project Detail', 'testimonials' ), function( \WP_Post $post ) {
 			$this->nonce_field();
 			?>
-            <table class="form-table">
-                <tr>
-                    <th><label for="portfolio-url"><?php esc_html_e( 'Related Link', 'testimonials' ) ?></label></th>
-                    <td>
-                        <input type="url" name="portfolio-url" id="portfolio"
-                               value="<?php echo esc_attr( get_post_meta( $post->ID, '_portfolio_url', true ) ) ?>"
-                               placeholder="<?php esc_attr_e( 'e.g. https://example.com/project', 'testimonials' ) ?>" />
-                    </td>
-                </tr>
-            </table>
+			<table class="form-table">
+				<tr>
+					<th><label for="portfolio-url"><?php esc_html_e( 'Related Link', 'testimonials' ); ?></label></th>
+					<td>
+						<input type="url" name="portfolio-url" id="portfolio"
+							value="<?php echo esc_attr( get_post_meta( $post->ID, '_portfolio_url', true ) ); ?>"
+							placeholder="<?php esc_attr_e( 'e.g. https://example.com/project', 'testimonials' ); ?>" />
+					</td>
+				</tr>
+			</table>
 			<?php
-        }, $post->post_type );
+		}, $post->post_type );
 	}
 
 	protected function save( $post ) {
-	    foreach ( [ 'url' ] as $key ) {
-	        update_post_meta( $post->ID, '_portfolio_' . $key, filter_input( INPUT_POST, 'portfolio-' . $key ) );
-        }
+		foreach ( [ 'url' ] as $key ) {
+			update_post_meta( $post->ID, '_portfolio_' . $key, filter_input( INPUT_POST, 'portfolio-' . $key ) );
+		}
 	}
 }

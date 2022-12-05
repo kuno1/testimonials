@@ -28,7 +28,7 @@ abstract class PostType extends Singleton {
 	protected function init() {
 		static::$is_initialized = true;
 		if ( ! self::$language ) {
-			add_action( 'init', [ $this, 'i18n'], 2 );
+			add_action( 'init', [ $this, 'i18n' ], 2 );
 			self::$language = true;
 		}
 		add_action( 'init', [ $this, 'register_post_type' ] );
@@ -42,7 +42,7 @@ abstract class PostType extends Singleton {
 	 */
 	public function i18n() {
 		$mo = dirname( dirname( dirname( __DIR__ ) ) ) . '/languages/testimonials-%s.mo';
-		$mo = sprintf( $mo, get_user_locale() );
+		$mo = sprintf( $mo, get_locale() );
 		if ( file_exists( $mo ) ) {
 			load_textdomain( 'testimonials', $mo );
 		}
@@ -171,7 +171,7 @@ abstract class PostType extends Singleton {
 	 * @param \WP_Post $post
 	 */
 	public function register_meta_boxes( $post_type, $post ) {
-		if ( $post_type !== static::get_post_type() ) {
+		if ( static::get_post_type() !== $post_type ) {
 			return;
 		}
 		$this->add_meta_boxes( $post );
@@ -197,7 +197,8 @@ abstract class PostType extends Singleton {
 			SELECT COUNT( ID ) FROM { $wpdb->posts }
 			WHERE post_type = %s
 SQL;
-		return (bool) $wpdb->get_var( $wpdb->prepare( $quer, $post_type ) );
+		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		return (bool) $wpdb->get_var( $wpdb->prepare( $query, $post_type ) );
 	}
 
 	/**
