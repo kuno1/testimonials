@@ -22,15 +22,15 @@ class TestimonialPostType extends PostType {
 			'menu_icon'         => 'dashicons-awards',
 			'show_in_rest'      => true,
 			'supports'          => [ 'title', 'editor', 'thumbnail', 'excerpt', 'page-attributes' ],
-            'label'             => __( 'Testimonials', 'testimonials' ),
+			'label'             => __( 'Testimonials', 'testimonials' ),
 			'show_in_nave_menu' => false,
-            'labels'            => [
+			'labels'            => [
 				'singular_name'         => __( 'Testimonial', 'testimonials' ),
 				'featured_image'        => __( 'Profile picture', 'testimonials' ),
 				'set_featured_image'    => __( 'Set profile picture', 'testimonials' ),
 				'remove_featured_image' => __( 'Remove profile picture', 'testimonials' ),
 				'use_featured_image'    => __( 'Use as profile picture', 'testimonials' ),
-            ],
+			],
 		] );
 		register_post_type( static::get_post_type(), $args );
 	}
@@ -46,23 +46,35 @@ class TestimonialPostType extends PostType {
 			?>
 			<table class="form-table">
 				<tr>
-					<th><label for="testimonial-position"><?php esc_html_e( 'Position', 'testimonials' ) ?></label></th>
-                    <td><input type="text" class="regular-text" id="testimonial-position" name="testimonial-position"
-                               value="<?php echo esc_attr( get_post_meta( $post->ID, '_testimonial_position', true ) ) ?>"
-                               placeholder="<?php esc_attr_e( 'e.g. CEO of Super Company', 'testimonials' ) ?>" /></td>
+					<th>
+						<label for="testimonial-position"><?php esc_html_e( 'Position', 'testimonials' ); ?></label>
+					</th>
+					<td>
+						<input type="text" class="regular-text" id="testimonial-position" name="testimonial-position"
+							value="<?php echo esc_attr( get_post_meta( $post->ID, '_testimonial_position', true ) ); ?>"
+							placeholder="<?php esc_attr_e( 'e.g. CEO of Super Company', 'testimonials' ); ?>" />
+					</td>
 				</tr>
-                <tr>
-                    <th><label for="testimonial-source"><?php esc_html_e( 'Source', 'testimonials' ) ?></label></th>
-                    <td><input type="text" class="regular-text" id="testimonial-source" name="testimonial-source"
-                               value="<?php echo esc_attr( get_post_meta( $post->ID, '_testimonial_source', true ) ) ?>"
-                               placeholder="<?php esc_attr_e( 'e.g. Great Magazine Vol.999', 'testimonials' ) ?>" /></td>
-                </tr>
-                <tr>
-                    <th><label for="testimonial-url"><?php esc_html_e( 'URL', 'testimonials' ) ?></label></th>
-                    <td><input type="url" class="regular-text" id="testimonial-url" name="testimonial-url"
-                               value="<?php echo esc_attr( get_post_meta( $post->ID, '_testimonial_url', true ) ) ?>"
-                               placeholder="<?php esc_attr_e( 'e.g. https://example.com', 'testimonials' ) ?>" /></td>
-                </tr>
+				<tr>
+					<th>
+						<label for="testimonial-source"><?php esc_html_e( 'Source', 'testimonials' ); ?></label>
+					</th>
+					<td>
+						<input type="text" class="regular-text" id="testimonial-source" name="testimonial-source"
+							value="<?php echo esc_attr( get_post_meta( $post->ID, '_testimonial_source', true ) ); ?>"
+							placeholder="<?php esc_attr_e( 'e.g. Great Magazine Vol.999', 'testimonials' ); ?>" />
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<label for="testimonial-url"><?php esc_html_e( 'URL', 'testimonials' ); ?></label>
+					</th>
+					<td>
+						<input type="url" class="regular-text" id="testimonial-url" name="testimonial-url"
+							value="<?php echo esc_attr( get_post_meta( $post->ID, '_testimonial_url', true ) ); ?>"
+							placeholder="<?php esc_attr_e( 'e.g. https://example.com', 'testimonials' ); ?>" />
+					</td>
+				</tr>
 			</table>
 			<?php
 		}, $post->post_type );
@@ -81,9 +93,9 @@ class TestimonialPostType extends PostType {
 	}
 
 	protected function save( $post ) {
-	    foreach ( [ 'position', 'source', 'url' ] as $key ) {
-	        update_post_meta( $post->ID, '_testimonial_' . $key, filter_input( INPUT_POST, 'testimonial-' . $key ) );
-        }
+		foreach ( [ 'position', 'source', 'url' ] as $key ) {
+			update_post_meta( $post->ID, '_testimonial_' . $key, filter_input( INPUT_POST, 'testimonial-' . $key ) );
+		}
 	}
 
 
